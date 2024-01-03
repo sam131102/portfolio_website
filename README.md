@@ -1,13 +1,14 @@
 # sambhavgarg.com
-A personal résumé website for recruiters showcasing all my skills and projects
+A personal résumé website for recruiters showcasing all my skills and projects in the form of a 3D game
 
 # Tech Stack
-Front-End: HTML/CSS, Typescript, React
+Front-End: HTML/CSS, Typescript, React, WebGL(Rendering)
 Back-End: Node.js
-Database: MongoDB
+Three.js library for WebGL Development
+
 
 # Design
-Figma, wireframes or mockups to plan the layout and design of the website using Figma
+Blendr, making 3D assets
 
 # Hosting Provider
-Vercel or Netlify
+Vercel
