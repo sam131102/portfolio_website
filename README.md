@@ -2,9 +2,9 @@
 A personal résumé website for recruiters showcasing all my skills and projects in the form of a 3D game
 
 # Tech Stack
-Back-End: C#
-Unity Hub
-
+React.js
+BootStrap
+TypeScript
 
 # Design
-Unity Assets
+Figma
