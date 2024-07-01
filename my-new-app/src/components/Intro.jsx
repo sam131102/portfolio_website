@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import SambhavImage from '../';
 
 function IntroComponent() {
     return(
@@ -21,8 +20,10 @@ function IntroComponent() {
                 <p>G</p>
             </div>
             <div className='box'>
-                <img className='.img' src='../Sambhav.png' alt="Sambhav Garg"/>
+                <p className='heading'>Welcome to my Portfolio</p>
+                <p className='box-content'>Hi, I'm Sambhav Garg, a passionate software developer with a knack for creating innovative solutions. Explore my projects and get to know more about my journey and expertise.</p>
             </div>
+            <img className='img' src={`${process.env.PUBLIC_URL}/sambhav.png`} alt="Sambhav Garg"/>
         </div>
         );
 }

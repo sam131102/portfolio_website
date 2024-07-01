@@ -16,7 +16,7 @@ function NavbarComponent() {
               <Nav.Link href="#contact" className='nav-button'>Contact Me</Nav.Link>
             </div>
             <div className='nav-links'>
-              <Button href="link-to-resume" className='nav-button'>Resume</Button>
+              <Button href="/Sambhav_Garg_Resume.pdf" download="Sambhav_Garg_Resume" className='nav-button'>Resume</Button>
               <Button href="https://github.com/sam131102" className='link'><FaGithub size={40}/></Button>
               <Button href="https://www.linkedin.com/in/sambhav-garg-69862b149/" className='link'><FaLinkedin size={40}/></Button>
             </div>
