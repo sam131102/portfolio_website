@@ -5,7 +5,7 @@ function ContactComponent() {
     return(
     <div className='contact-section'>
         <img src={`${process.env.PUBLIC_URL}/BottomVector.svg`} alt="Wave Background" className="wave-background" />
-        <div className='skills contact'>Contact Me</div>
+        <div className='skill contact'>Contact Me</div>
     </div>
     );
 }

@@ -15,8 +15,8 @@ function IntroComponent() {
             </div>
             <div className='name2'> 
                 <p>G</p>
-                <p>R</p>
                 <p>A</p>
+                <p>R</p>
                 <p>G</p>
             </div>
             <div className='box'>
@@ -25,7 +25,7 @@ function IntroComponent() {
             </div>
             <img className='img' src={`${process.env.PUBLIC_URL}/sambhav.png`} alt="Sambhav Garg"/>
         </div>
-        );
+    );
 }
 
 export default IntroComponent;

@@ -3,7 +3,7 @@ import './App.css';
 
 function AboutComponent(){
     return(
-        <div className='intro-box'>
+        <div id='about' className='intro-box'>
             <div className='aboutme-box'>
                 <div className='about-me'>ABOUT ME</div>
                 <div className='box-content2'>I am Sambhav Garg, a recent graduate with a Bachelor of Arts in Computer Science from the University of British Columbia. With a strong foundation in software development, I specialize in JAVA, JavaScript, TypeScript, HTML/CSS, SASS, Bootstrap, Angular, PHP, SQL, and Python. My technical expertise extends to AWS services such as S3, Kinesis, and Cognito, as well as tools like Unity, Docker, and Apache.</div>

@@ -16,11 +16,19 @@
   z-index: 1000;
   padding: 10px 0;
 }
+.nav-button.active {
+  border-bottom: 2px solid white;
+  color: red;
+}
 
 .menu {
   display: flex;
   flex-grow: 1;
   justify-content: center;
+}
+
+.section {
+  min-height: 100vh;
 }
 
 .nav-links {
@@ -29,10 +37,9 @@
 }
 
 .nav-button {
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   margin: 10px 10px;
+  cursor: pointer;
 }
 
 .link {
@@ -44,73 +51,89 @@
 
 .intro-box {
   display: flex;
-  flex-direction: row;
-  background-color: black;
-}
-
-.name1 {
-  font-weight: bold;
-  font-size: 3rem; 
-  background: linear-gradient(to bottom, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
-  display: flex;
   flex-direction: column;
-  align-items: start;
-  margin-left: 35px;
-  margin-right: 25px;
-  margin-top: 60px;
-  line-height: 0;
+  align-items: center;
+  background-color: black;
+  padding: 20px;
+  text-align: left;
+  padding-top: 60px;
 }
 
-.name2 {
-  font-weight: bold;
-  font-size: 3rem; 
-  background: linear-gradient(to bottom, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+.name1, .name2 {
   display: flex;
-  flex-direction: column-reverse;
-  align-items: start;
-  margin-left: 20px;
-  margin-right: 25px;
-  line-height: 0;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 5rem;
+  color: white;
+}
+
+.name1 p, .name2 p {
+  margin: 0 5px;
 }
 
 .box {
-  width: 800px;
-  height: 400px;
+  width: 90%;
+  max-width: 800px;
   border: 5px solid white;
   border-radius: 30px;
-  margin-top: 210px;
-  margin-left: 200px;
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  padding: 20px;
+  color: white;
+  margin: 20px 0;
 }
 
 .img {
-  border-radius: inherit;
-  width: 300px;
-  height: 400px;
-  margin-top: 210px;
-  margin-left: 100px;
+  width: 90%;
+  max-width: 300px;
   border: 5px solid white;
   border-radius: 30px;
+  margin: 20px 0;
 }
 
 .heading {
   font-weight: bold;
-  font-size: 3rem; 
-  text-align: right;
-  margin-right: 10px;
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
 .box-content {
-  font-size: 2rem; 
-  text-align: left;
-  margin-left: 10px;
-  margin-top: 20px;
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+  .intro-box {
+      flex-direction: row;
+      justify-content: center;
+  }
+
+  .name1, .name2 {
+      flex-direction: column;
+      font-size: 5rem;
+  }
+
+  .name1 {
+      margin-right: 20px;
+  }
+
+  .name2 {
+      margin-left: 20px;
+      margin-right: 220px;
+  }
+
+  .box {
+      margin: 20px 20px;
+  }
+
+  .img {
+      margin: 20px 20px;
+  }
+
+  .heading {
+      font-size: 2.5rem;
+  }
+
+  .box-content {
+      font-size: 1.5rem;
+  }
 }
 
 .aboutme-box {
@@ -123,9 +146,7 @@
   margin-right: 200px;
   margin-left: 200px;
   margin-bottom: 200px;
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   flex-direction: column;
 }
 
@@ -136,15 +157,11 @@
   text-align: left;
   margin-top: 10px;
   margin-left: 20px;
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
 }
 
 .box-content2 {
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: green;
+  color: white;
   font-size: 2rem;
   margin-top: 20px;
   margin-left: 20px;
@@ -170,7 +187,7 @@
   transform: scaleX(-1);;
 }
 
-.skills {
+.skill {
   font-size: 5rem;
   font-weight: bold;
   position: relative;
@@ -179,9 +196,10 @@
 
 .skill-box {
   display: flex;
+  flex-direction: column;
   position: relative;
   width: 400px;
-  height: 600px;
+  height: 500px;
   border: 5px solid white;
   border-radius: 30px;
   margin-right: 150px;
@@ -190,12 +208,17 @@
 }
 
 .skill-heading {
-  color: Black;
+  color: white;
   font-size: 2rem;
   font-weight: bold;
   margin-top: 20px;
-  justify-content: center;
 }
+
+.skills {
+  color: white;
+  font-size: 2rem;
+}
+
 
 .skill-boxes {
   display: flex;
@@ -209,10 +232,6 @@
   justify-content: center;
 }
 
-.project-scroll {
-  overflow: scroll;
-}
-
 .project-icons {
   display: flex;
   position: relative;
@@ -221,9 +240,7 @@
   border: 5px solid white;
   border-radius: 30px;
   margin-right: 150px;
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   margin-bottom: 20px;
   margin-top: 150px;
 }
@@ -232,14 +249,28 @@
   display: flex;
   position: relative;
   width: 600px;
-  height: 200px;
+  height: 300px;
   border: 5px solid white;
   border-radius: 30px;
   margin-right: 150px;
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   margin-bottom: 150px;
+  font-size: 1.5rem;
+}
+
+.margin {
+  margin-top: 20px;
+}
+
+.img-project {
+  display: flex;
+  position: relative;
+  width: 400px;
+  height: 300px;
+  border-radius: 30px;
+  margin-right: 150px;
+  margin-top: 70px;
+  margin-bottom: 2%;
 }
 
 .contact-section {
@@ -248,9 +279,7 @@
 }
 
 .contact {
-  background: linear-gradient(to right, blue, green);
-  -webkit-background-clip: text;
-  color: transparent;
+  color: white;
   justify-content: left;
   margin-left: 100px;
   margin-top: 150px;

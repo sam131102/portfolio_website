@@ -6,18 +6,13 @@ function ProjectsComponent() {
         <>
         <div className='projects-section'>
             <img src={`${process.env.PUBLIC_URL}/wave.svg`} alt="Wave Background" className="wave-background flipped" />
-            <div className='skills'>PROJECTS</div>
+            <div className='skill'>PROJECTS</div>
         </div>
         <div className='project-scroll'>
             <div className='skill-boxes'>
-                <div className='project-icons'></div>
-                <div className='project-icons'></div>
-                <div className='project-icons'></div>
-            </div>
-            <div className='skill-boxes'>
-                <div className='project'></div>
-                <div className='project'></div>
-                <div className='project'></div>
+                <img className='img-project' src={`${process.env.PUBLIC_URL}/prvcy.png`} alt="PRVCY App"/>
+                <img className='img-project' src={`${process.env.PUBLIC_URL}/carpool.png`} alt="Carpooling App"/>
+                <img className='img-project' src={`${process.env.PUBLIC_URL}/fifa.png`} alt="FIFA"/>
             </div>
         </div>
         </>
