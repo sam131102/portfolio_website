@@ -150,32 +150,34 @@ body, html {
 }
 
 .projects-grid {
-  display: flex;
-  flex-direction: column; /* Stack projects vertically */
-  gap: 15px; /* Adjust gap between project icons */
-  width: 100%; /* Use full width */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns for desktop */
+  gap: 20px;
+  width: 100%;
   box-sizing: border-box;
+  margin-top: 50px;
 }
 
 .project-icon {
-  width: 100%; /* Ensure icons take full width */
-  height: auto; /* Allow height to adjust with content */
   position: relative;
-  overflow: visible; /* Ensure visibility */
-  padding: 10px; /* Add padding around each project icon */
-  border-radius: 10px; /* Add rounded corners */
+  width: 200px; /* Set a fixed width for desktop */
+  height: 100px; /* Adjust height to maintain aspect ratio */
+  margin: 0 auto; /* Center the icons */
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-icon img {
-  position: static; /* Reset position to default */
-  width: 100%; /* Full width for the images */
-  height: auto; /* Maintain aspect ratio */
+  width: 200px;
+  height: 100px;
+  object-fit: cover;
   border-radius: 10px; /* Add rounded corners to the image */
 }
 
-.project-icon:last-child {
-  width: 80%; /* Reduce width for the last project icon */
-  align-self: center; /* Center the last project icon */
+.project-icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .work-experience-card {
@@ -207,7 +209,7 @@ body, html {
 .experience-box:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 40%; /* Expand to full height */
+  height: 28%; /* Expand to full height */
   z-index: 10; /* Bring to front */
   position: relative;
 }
@@ -392,23 +394,24 @@ body, html {
   }
 
   .project-icon {
-    width: 100%; /* Ensure icons take full width */
+    width: 90%; /* Reduce icon width */
     height: auto; /* Allow height to adjust with content */
     position: relative;
-    overflow: visible; /* Ensure visibility */
-    padding-left: 30px; /* Add padding around each project icon */
+    overflow: hidden; /* Ensure visibility */
+    padding: 5px; /* Add padding around each project icon */
     border-radius: 10px; /* Add rounded corners */
+    margin: 0 auto; /* Center the icons */
   }
 
   .project-icon img {
     position: static; /* Reset position to default */
-    width: 80%; /* Full width for the images */
+    width: 100%; /* Full width for the images */
     height: auto; /* Maintain aspect ratio */
     border-radius: 10px; /* Add rounded corners to the image */
   }
 
   .project-icon:last-child {
-    width: 40%; /* Reduce width for the last project icon */
+    width: 40%; /* Set consistent width */
     align-self: center; /* Center the last project icon */
   }
 
