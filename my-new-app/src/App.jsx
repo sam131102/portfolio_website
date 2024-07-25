@@ -128,16 +128,13 @@ function App() {
               </div>
               <div className="contact-boxes">
                 <div className="contact-box email-box">
-                  <a href="mailto:sambhavgarg2002@gmail.com"></a>
-                  <img src={`${process.env.PUBLIC_URL}/apple.png`} alt="Email Icon" className="contact-icon" />
+                  <a href="mailto:sambhavgarg2002@gmail.com"><img src={`${process.env.PUBLIC_URL}/apple.png`} alt="Email Icon" className="contact-icon" /></a>
                 </div>
                 <div className="contact-box linkedin-box">
-                  <a href="https://www.linkedin.com/in/sambhav-garg-69862b149/"></a>
-                  <img src={`${process.env.PUBLIC_URL}/linkedin.png`} alt="LinkedIn Icon" className="contact-icon" />
+                  <a href="https://www.linkedin.com/in/sambhav-garg-69862b149/"> <img src={`${process.env.PUBLIC_URL}/linkedin.png`} alt="LinkedIn Icon" className="contact-icon" /></a>
                 </div>
                 <div className="contact-box github-box">
-                  <a href="https://github.com/sam131102"></a>
-                  <img src={`${process.env.PUBLIC_URL}/github.png`} alt="GitHub Icon" className="contact-icon" />
+                  <a href="https://github.com/sam131102"><img src={`${process.env.PUBLIC_URL}/github.png`} alt="GitHub Icon" className="contact-icon" /></a>
                 </div>
               </div>
             </div>
