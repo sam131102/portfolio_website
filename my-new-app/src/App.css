@@ -1,9 +1,9 @@
+/* General styles */
 body, html {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow: auto;
 }
@@ -120,6 +120,7 @@ body, html {
 
 .about-me-card {
   grid-column: span 2;
+  height: auto; /* Ensure height adjusts to content */
 }
 
 .about-me-card p {
@@ -145,47 +146,41 @@ body, html {
 
 .project-card {
   grid-column: span 2;
+  height: auto; /* Ensure the card expands to fit all content */
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  height: 300px;
-  width: 600px;
-  padding: 20px;
+  display: flex;
+  flex-direction: column; /* Stack projects vertically */
+  gap: 15px; /* Adjust gap between project icons */
+  width: 100%; /* Use full width */
   box-sizing: border-box;
 }
 
 .project-icon {
+  width: 100%; /* Ensure icons take full width */
+  height: auto; /* Allow height to adjust with content */
   position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: visible; /* Ensure visibility */
+  padding: 10px; /* Add padding around each project icon */
+  border-radius: 10px; /* Add rounded corners */
 }
 
 .project-icon img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: static; /* Reset position to default */
+  width: 100%; /* Full width for the images */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Add rounded corners to the image */
 }
 
-.project-icon:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.project-icon:nth-child(4) img {
-  object-fit: contain;
+.project-icon:last-child {
+  width: 80%; /* Reduce width for the last project icon */
+  align-self: center; /* Center the last project icon */
 }
 
 .work-experience-card {
   grid-row: span 2;
-  height: 730px;
+  height: auto; /* Ensure height adjusts to content */
 }
 
 .experience-timeline {
@@ -262,6 +257,7 @@ body, html {
   padding: 5px 0;
   font-size: 1.2rem;
   color: black;
+  text-align: center; /* Center text under the profile picture */
 }
 
 .profile-card h4 {
@@ -356,38 +352,84 @@ body, html {
   height: 60px;
 }
 
-@media (max-width: 768px) {
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  /* Adjust navbar and button */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem; /* Reduce font size */
+  }
+
+  .resume-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  /* Vertical layout for all boxes */
   .main-content {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Reduce gap to maximize screen usage */
+    padding: 10px; /* Reduce padding to fit more content */
   }
 
-  .card, .profile-card {
-    width: 90%;
-    height: auto;
+  .profile-card, .card, .work-experience-card, .skills-card, .contact-card {
+    width: 95%; /* Use more width of the screen */
+    margin: 5px 0; /* Reduce margin to maximize space */
+    box-sizing: border-box;
   }
 
-  .profile-pic {
-    width: 80px;
-    height: 80px;
-  }
-
+  /* Display projects in a single column */
   .projects-grid {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 15px; /* Adjust gap between project icons */
+    width: 100%; /* Use full width */
+    box-sizing: border-box;
   }
 
   .project-icon {
-    width: 100px;
-    height: 100px;
+    width: 100%; /* Ensure icons take full width */
+    height: auto; /* Allow height to adjust with content */
+    position: relative;
+    overflow: visible; /* Ensure visibility */
+    padding-left: 30px; /* Add padding around each project icon */
+    border-radius: 10px; /* Add rounded corners */
   }
 
-  .contact-boxes {
-    flex-direction: column;
+  .project-icon img {
+    position: static; /* Reset position to default */
+    width: 80%; /* Full width for the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners to the image */
   }
 
-  .contact-box {
-    margin: 10px 0;
-    width: 90%;
+  .project-icon:last-child {
+    width: 40%; /* Reduce width for the last project icon */
+    align-self: center; /* Center the last project icon */
+  }
+
+  /* Remove hover effects and keep skills expanded */
+  .skills-card {
+    height: auto;
+  }
+
+  .skills-list {
+    column-count: 1; /* Single column layout */
+    width: 100%;
+  }
+
+  .experience-box, .skills-card {
+    transform: none;
+    box-shadow: none;
+    cursor: default;
+  }
+
+  .experience-box:hover, .skills-card:hover {
+    transform: none;
+    box-shadow: none;
   }
 }
