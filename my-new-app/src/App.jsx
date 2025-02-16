@@ -64,19 +64,19 @@ function App() {
                   <p>Curious Markings</p>
                   <p>Nov 2024 - Present</p>
                   <p className="description">Lead Software Developer at Curious Markings Co., specializing in building intuitive, no-code/low-code platforms like AppSage and MacroSage. Experienced in full-stack development with Ruby, JavaScript, HTML, CSS, and AI-driven solutions using GPT. Passionate about creating scalable, user-friendly applications that empower individuals to design and manage their own digital experiences.</p>
-                </div>
+              </div>
               <div className="experience-box">
                   <h3>Rental Agent</h3>
                   <p>Kelowna Boat Rentals</p>
                   <p>May 2023 - Sept 2023</p>
                   <p className="description">Rental Agent with Kelowna Boat Rentals, sales & customer service, maintenance, collection of rental fees and deposits, safety & Training</p>
-                </div>
+              </div>
               <div className="experience-box">
                   <h3>Merchandiser</h3>
                   <p>Costco Wholesale</p>
                   <p>June 2022 - Nov 2022</p>
                   <p className="description">Merchandiser Costco, customer interactions, inventory and stocking, sales consulting for tires</p>
-                </div>
+              </div>
               <div className="experience-timeline">
                 <div className="experience-box">
                   <h3>Tech Advisor</h3>
